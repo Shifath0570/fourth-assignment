@@ -43,7 +43,7 @@ function toggling(id) {
 
     let select = document.getElementById(id);
     currentStatus = id;
-    
+
 
     select.classList.remove('bg-white', 'text-black')
     select.classList.add('bg-[#1447e6]', 'text-white')
@@ -80,7 +80,7 @@ mainContainer.addEventListener('click', function (event) {
         let addressTimeSelary = parentNode.querySelector('.address_time_selary').innerText;
         let statusBtn = parentNode.querySelector('.status_btn').innerText;
         let discription = parentNode.querySelector('.discription').innerText;
-        parentNode.querySelector('.status_btn').innerText = 'interview';
+        parentNode.querySelector('.status_btn').innerText = 'INTERVIEW';
         parentNode.querySelector('.status_btn').classList.add('btn-success');
         parentNode.querySelector('.status_btn').classList.remove('btn-error');
 
@@ -89,7 +89,7 @@ mainContainer.addEventListener('click', function (event) {
             companyName,
             profession,
             addressTimeSelary,
-            statusBtn :'interview',
+            statusBtn,
             discription
         }
 
@@ -101,13 +101,13 @@ mainContainer.addEventListener('click', function (event) {
 
         rejectedSection = rejectedSection.filter(card => card.companyName != cardInfo.companyName);
 
-        if(currentStatus == "rejected_card_btn"){
+        if (currentStatus == "rejected_card_btn") {
             renderRejected()
         }
 
         canculateCount();
 
-        
+
 
     }
     else if (event.target.classList.contains('rejected_btn')) {
@@ -118,7 +118,7 @@ mainContainer.addEventListener('click', function (event) {
         let addressTimeSelary = parentNode.querySelector('.address_time_selary').innerText;
         let statusBtn = parentNode.querySelector('.status_btn').innerText;
         let discription = parentNode.querySelector('.discription').innerText;
-        parentNode.querySelector('.status_btn').innerText = 'rejected';
+        parentNode.querySelector('.status_btn').innerText = 'REJECTED';
         parentNode.querySelector('.status_btn').classList.add('btn-error');
         parentNode.querySelector('.status_btn').classList.remove('btn-success');
 
@@ -126,7 +126,7 @@ mainContainer.addEventListener('click', function (event) {
             companyName,
             profession,
             addressTimeSelary,
-            statusBtn :'rejected',
+            statusBtn,
             discription
         }
 
@@ -138,13 +138,39 @@ mainContainer.addEventListener('click', function (event) {
 
         interviewSection = interviewSection.filter(card => card.companyName != cardInfo.companyName);
 
-        if(currentStatus == "interview_card_btn"){
+        if (currentStatus == "interview_card_btn") {
             renderInterview()
         }
 
         canculateCount();
 
     }
+    else if (event.target.classList.contains('delete_btn')) {
+        let parentNode = event.target.parentNode.parentNode.parentNode;
+
+        parentNode.remove();
+
+        
+        
+        
+
+
+        // parentNode.classList.add('hidden');
+
+
+        
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 })
 
@@ -160,7 +186,7 @@ function renderInterview() {
         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">${interview.companyName}</h2>
-                                <button class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></button>
+                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold my-2 profession">${interview.profession}</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">${interview.addressTimeSelary}</p>
@@ -192,7 +218,7 @@ function renderRejected() {
         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">${rejected.companyName}</h2>
-                                <button class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></button>
+                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold my-2 profession">${rejected.profession}</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">${rejected.addressTimeSelary}</p>
