@@ -63,6 +63,7 @@ function toggling(id) {
         renderRejected();
     }
 
+
 }
 
 
@@ -157,7 +158,10 @@ function renderInterview() {
         div.className = 'card w-7xl bg-base-100 card-sm shadow-sm p-4';
         div.innerHTML = `
         <div>
-                            <h2 class="text-lg font-bold company_name">${interview.companyName}</h2>
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-lg font-bold company_name">${interview.companyName}</h2>
+                                <button class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
                             <p class="text-sm font-semibold my-2 profession">${interview.profession}</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">${interview.addressTimeSelary}</p>
                             <button class="btn status_btn" id="not_applied01">${interview.statusBtn}</button>
@@ -186,7 +190,10 @@ function renderRejected() {
         div.className = 'card w-7xl bg-base-100 card-sm shadow-sm p-4';
         div.innerHTML = `
         <div>
-                            <h2 class="text-lg font-bold company_name">${rejected.companyName}</h2>
+                            <div class="flex justify-between items-center">
+                                <h2 class="text-lg font-bold company_name">${rejected.companyName}</h2>
+                                <button class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
                             <p class="text-sm font-semibold my-2 profession">${rejected.profession}</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">${rejected.addressTimeSelary}</p>
                             <button class="btn status_btn" id="not_applied01">${rejected.statusBtn}</button>
