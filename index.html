@@ -54,7 +54,7 @@
             <section>
                 <div class="flex justify-between">
                     <h2 class="text-lg font-bold">Available Jobs</h2>
-                    <h3 class="text-sm font-semibold">8 jobs</h3>
+                    <h3 class="text-sm font-semibold"><span id="job_decrese">8</span> jobs</h3>
                 </div>
                 <div class="mt-4">
                     <button onclick="toggling('all_card_btn')" class="btn btn-xs px-8 py-4 text-xm"
@@ -86,7 +86,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">Mobile First Corp</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E01"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold my-2 profession">React Native Developer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Remote • Full-time • $130,000 -
@@ -106,7 +106,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">WebFlow Agency</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E02"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">Web Designer & Developer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Los Angeles, CA • Part-time •
@@ -127,7 +127,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">DataViz Solutions</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E03"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">Data Visualization Specialist</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Boston, MA • Full-time • $125,000
@@ -147,7 +147,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">CloudFirst Inc</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E04"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">Backend Developer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Seattle, WA • Full-time • $140,000
@@ -167,7 +167,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">Innovation Labs</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E05"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">UI/UX Engineer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Austin, TX • Full-time • $110,000
@@ -188,7 +188,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">MegaCorp Solutions</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E06"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">JavaScript Developer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">New York, NY • Full-time •
@@ -209,7 +209,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">StartupXYZ</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E07"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">Full Stack Engineer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">Remote • Full-time • $120,000 -
@@ -230,7 +230,7 @@
                         <div>
                             <div class="flex justify-between items-center">
                                 <h2 class="text-lg font-bold company_name">TechCorp Industries</h2>
-                                <button class="btn rounded-full delete_btn"><i class="fa-solid fa-trash-can delete_btn"></i></button>
+                                <button class="btn rounded-full delete_btn" id="delete_E08"><i class="fa-solid fa-trash-can delete_btn"></i></button>
                             </div>
                             <p class="text-sm font-semibold mt-1 profession">Senior Frontend Developer</p>
                             <p class="text-xs font-semibold my-4 address_time_selary">San Francisco, CA • Full-time •
@@ -253,6 +253,7 @@
     </section>
 
 
+    <script src="all_delete_btn.js"></script>
     <script src="first.js"></script>
 </body>
 

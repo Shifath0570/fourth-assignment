@@ -68,8 +68,6 @@ function toggling(id) {
 
 
 
-
-
 mainContainer.addEventListener('click', function (event) {
 
     if (event.target.classList.contains('interview_btn')) {
@@ -150,27 +148,7 @@ mainContainer.addEventListener('click', function (event) {
 
         parentNode.remove();
 
-        
-        
-        
-
-
-        // parentNode.classList.add('hidden');
-
-
-        
-
     }
-
-
-
-
-
-
-
-
-
-
 
 })
 
