@@ -80,6 +80,9 @@ mainContainer.addEventListener('click', function (event) {
         let statusBtn = parentNode.querySelector('.status_btn').innerText;
         let discription = parentNode.querySelector('.discription').innerText;
         parentNode.querySelector('.status_btn').innerText = 'interview';
+        parentNode.querySelector('.status_btn').classList.add('btn-success');
+        parentNode.querySelector('.status_btn').classList.remove('btn-error');
+
 
         let cardInfo = {
             companyName,
@@ -115,6 +118,8 @@ mainContainer.addEventListener('click', function (event) {
         let statusBtn = parentNode.querySelector('.status_btn').innerText;
         let discription = parentNode.querySelector('.discription').innerText;
         parentNode.querySelector('.status_btn').innerText = 'rejected';
+        parentNode.querySelector('.status_btn').classList.add('btn-error');
+        parentNode.querySelector('.status_btn').classList.remove('btn-success');
 
         let cardInfo = {
             companyName,
