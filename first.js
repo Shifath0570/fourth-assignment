@@ -15,6 +15,8 @@ let cardContainer = document.getElementById('all_Card');
 let mainContainer = document.getElementById('main_container');
 let newSection = document.getElementById('new_section');
 
+let emptyFile = document.getElementById('no_job')
+
 
 
 function canculateCount() {
@@ -22,6 +24,7 @@ function canculateCount() {
     interviewCount.innerText = interviewSection.length;
     rejectedCount.innerText = rejectedSection.length;
 }
+
 
 
 canculateCount();
@@ -218,6 +221,30 @@ function renderRejected() {
 
 
 
+
+interviewCardBtn.addEventListener('click', function () {
+    if (interviewSection.length == 0) {
+        emptyFile.classList.remove('hidden');
+    }
+    else{
+        emptyFile.classList.add('hidden');
+    }
+})
+
+
+rejectedCardBtn.addEventListener('click', function () {
+    if (rejectedSection.length == 0) {
+        emptyFile.classList.remove('hidden');
+    }
+    else{
+        emptyFile.classList.add('hidden');
+    }
+})
+
+
+allCardBtn.addEventListener('click', function () {
+    emptyFile.classList.add('hidden');
+})
 
 
 
